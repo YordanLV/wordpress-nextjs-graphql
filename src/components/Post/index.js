@@ -7,9 +7,7 @@ const Post = ({ postData }) => {
   return (
     <PostWrapper>
       <h2>{postData.node.title}</h2>
-      <p>
-        <ReactMarkdown source={postData.node.content} escapeHtml={false} />
-      </p>
+      <ReactMarkdown source={postData.node.content} escapeHtml={false} />
     </PostWrapper>
   );
 };

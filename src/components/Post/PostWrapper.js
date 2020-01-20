@@ -2,14 +2,14 @@ import styled from "@emotion/styled";
 
 const PostWrapper = styled.div`
   padding: 1.5rem 2rem;
-  margin:0 1rem 2rem 1rem;
+  margin: 0 1rem 2rem 1rem;
   border: 0.1rem solid white;
   transition: box-shadow 0.3s;
   background-color: var(--color-blue);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  cursor:pointer;
-  &:hover{
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
   }
   @media ${props => props.theme.media.lg} {
     margin-left: 1rem;
@@ -23,6 +23,9 @@ const PostWrapper = styled.div`
   }
   strong {
     font-weight: 800;
+  }
+  em {
+    font-style: italic;
   }
   p {
     margin-bottom: 2rem;
