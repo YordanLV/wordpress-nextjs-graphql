@@ -1,10 +1,17 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
+import styled from "@emotion/styled";
 
-import BlogHeadline from '../components/BlogHeadline';
 import Layout from "../components/Layout";
 import ListPosts from "../components/ListPosts";
 import POST_QUERY from "../graphql/post.query";
+
+const BlogHeadline = styled.h1`
+  font-size: 6rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 800;
+`;
 
 const Home = () => {
   const { data, loading, error } = useQuery(POST_QUERY);

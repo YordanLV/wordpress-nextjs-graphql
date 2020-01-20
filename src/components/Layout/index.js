@@ -1,6 +1,10 @@
 import React, { Fragment } from "react";
-import { ThemeProvider } from "emotion-theming";
 import { Global, css } from "@emotion/core";
+import { ThemeProvider } from "emotion-theming";
+
+import Container from './Container';
+import Footer from "../Footer";
+import ResetCss from "./ResetCss";
 
 const theme = {
   zIndex: {},
@@ -16,17 +20,34 @@ const theme = {
 const Layout = ({ children }) => {
   return (
     <Fragment>
+      <ResetCss />
       <Global
         styles={css`
+          @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
           :root {
-            --color-orange: #fd5e53;
-            --color-green: #21bf73;
-            --color-white: #FFFFFF;
-            --color-black: #000000
+            --color-pink: #f6e5f5;
+            --color-brown: #f6e7e6;
+            --color-blue: #b9cced;
+            --color-white: #ffffff;
+            --color-black: #000000;
+          }
+          html {
+            /* 1rem = 10px */
+            font-size: 62.5%;
+          }
+          body {
+            font-size: 1.6rem;
+            background-color: var(--color-pink);
+            font-family: 'Montserrat', sans-serif;
           }
         `}
       />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Container>
+          {children}
+          <Footer />
+        </Container>
+      </ThemeProvider>
     </Fragment>
   );
 };
