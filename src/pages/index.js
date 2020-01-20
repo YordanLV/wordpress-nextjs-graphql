@@ -16,6 +16,7 @@ const Home = () => {
   if (error) {
     return <p>Error: {JSON.stringify(error)}</p>;
   }
+  
   return (
     <Layout>
       <BlogHeadline>Wordpress Blog</BlogHeadline>
