@@ -1,7 +1,14 @@
-import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
+import React from "react";
+import { useQuery } from "@apollo/react-hooks";
+import styled from "@emotion/styled";
 
-import POST_QUERY from '../graphql/post.query';
+import Layout from "../components/Layout";
+import ListPosts from '../components/ListPosts';
+import POST_QUERY from "../graphql/post.query";
+
+const ListWrapper = styled.div`
+  border: 0.1rem solid black;
+`;
 
 const Home = () => {
   const { data, loading, error } = useQuery(POST_QUERY);
@@ -14,13 +21,11 @@ const Home = () => {
     return <p>Error: {JSON.stringify(error)}</p>;
   }
   return (
-    <div>
-      <ul>
-        {data.posts.edges.map(post => {
-          return <li key={post.node.postId}>{post.node.title}</li>
-        })}
-      </ul>
-    </div>
+    <Layout>
+      <ListWrapper>
+        <ListPosts data={data}/>
+      </ListWrapper>
+    </Layout>
   );
 };
 
