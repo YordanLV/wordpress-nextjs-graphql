@@ -9,6 +9,7 @@ Fetching data from: https://wordrpess-graphql.000webhostapp.com/
 
 - [x] Emotion
 - [x] Marked-down
+- [ ] Add individual page for every post
 - [ ] Proptypes
 - [ ] Tests
 
