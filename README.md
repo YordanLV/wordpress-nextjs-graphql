@@ -1,6 +1,6 @@
 # wordpress-nextjs-graphql
 
-Headless wordpress with Next.js and GraphQL
+Inexpesnive (Free) headless cms with wordpress, Next.js and Apollo (GraphQL).
 
 `yarn dev` for development
 `yarn build` for production
