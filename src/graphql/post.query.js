@@ -7,6 +7,7 @@ const POST_QUERY = gql`
         node {
           postId
           title
+          content
         }
       }
     }
