@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 
-import BlogHeadline from '../components/BlogHeadline';
+import BlogHeadline from "../components/BlogHeadline";
 import Layout from "../components/Layout";
 import ListPosts from "../components/ListPosts";
 import POST_QUERY from "../graphql/post.query";
@@ -16,11 +16,11 @@ const Home = () => {
   if (error) {
     return <p>Error: {JSON.stringify(error)}</p>;
   }
-  
+
   return (
     <Layout>
-      <BlogHeadline>Wordpress Blog</BlogHeadline>
-        <ListPosts data={data} />
+      <BlogHeadline>Wordpress-NextJS-Styled Starter</BlogHeadline>
+      <ListPosts data={data} />
     </Layout>
   );
 };

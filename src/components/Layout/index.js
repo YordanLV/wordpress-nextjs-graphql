@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Global, css } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 
-import Container from './Container';
+import Container from "./Container";
 import Footer from "../Footer";
 import ResetCss from "./ResetCss";
 
@@ -23,13 +23,15 @@ const Layout = ({ children }) => {
       <ResetCss />
       <Global
         styles={css`
-          @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+          @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
           :root {
             --color-pink: #f6e5f5;
             --color-brown: #f6e7e6;
             --color-blue: #b9cced;
             --color-white: #ffffff;
             --color-black: #000000;
+            --color-orange: #e7901e;
+            --color-tomato: tomato;
           }
           html {
             /* 1rem = 10px */
@@ -37,8 +39,11 @@ const Layout = ({ children }) => {
           }
           body {
             font-size: 1.6rem;
-            background-color: var(--color-pink);
-            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-orange);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "Montserrat", sans-serif;
           }
         `}
       />

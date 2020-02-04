@@ -4,7 +4,6 @@ import { createHttpLink } from 'apollo-link-http';
 import withApollo from 'next-with-apollo';
 import fetch from 'isomorphic-unfetch';
 
-// Update the GraphQL endpoint to any instance of GraphQL that you like
 const GRAPHQL_URL = 'https://wordrpess-graphql.000webhostapp.com/graphql';
 
 const link = createHttpLink({

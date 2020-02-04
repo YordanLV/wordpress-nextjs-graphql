@@ -7,7 +7,12 @@ const POST_QUERY = gql`
         node {
           postId
           title
+          date
           content
+          commentCount
+          featuredImage {
+            sourceUrl(size: LARGE)
+          }
         }
       }
     }
